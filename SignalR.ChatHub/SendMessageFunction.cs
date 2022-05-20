@@ -4,7 +4,7 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Azure.WebJobs.Extensions.SignalRService;
 
-namespace SignalR.Functions
+namespace SignalR.ChatHub
 {
 	public static class SendMessageFunction
 	{
