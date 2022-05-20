@@ -1,10 +1,6 @@
-# ARCHIVED: Moved to <https://github.com/goncalvesj/application-templates>
-
 # Angular + Serverless SignalR using Azure Functions
 
-Simple chat app using an angular 8 app with azure ``signalr`` service and azure functions.
-
-DEMO: <https://angular-signalr.jpcloud.tk/>
+Simple chat app using an angular app with azure ``signalr`` service and azure functions.
 
 ## Azure Functions
 
@@ -33,29 +29,17 @@ Create ``local.settings.json`` file with the below settings and start the functi
 
 ## Angular App
 
-The web client used to initiate the chat.
+The client used to initiate the chat.
 
-Update env.js file with the API URL.
+Update environment.ts file with the chatHubBaseUri.
 
-```JS
-(function(window) {
-  window.__env = window.__env || {};
-
-  window.__env.signalrUrl = 'http://localhost:7071/api';
-})(this);
+```TS
+export const environment =
+ {
+  production: false,
+  chatHubBaseUri: "http://localhost:7071"
+};
 ```
 
 - Run ```npm i | ng serve``` in VS Code
 - Open browser and test
-
-### Docker commands for Angular App
-
-- ``docker build -t <repo/imagename>:<tag> .``
-- ``docker run --rm -d -p 8080:80 --name <name> <repo/imagename>:<tag>``
-
-### Deploy
-
-See pipelines ``yaml`` files.
-
-- Build and Pushes docker images
-- Generates Helm charts and pushes to AKS

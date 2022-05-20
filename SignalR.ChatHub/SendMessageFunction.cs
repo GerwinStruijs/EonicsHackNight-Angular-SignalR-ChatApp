@@ -16,13 +16,13 @@ namespace SignalR.ChatHub
 		{
 			if (message == null) return null;
 
-			if (string.IsNullOrEmpty(message.UserId)) return null;
+			//if (string.IsNullOrEmpty(message.UserId)) return null;
 
 			return signalRMessages.AddAsync(
 				new SignalRMessage
 				{
 					// the message will only be sent to this user ID
-					UserId = message.UserId,
+					//UserId = message.UserId,
 					Target = "ReceiveMessage",
 					Arguments = new object[] { message }
 				});
