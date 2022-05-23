@@ -1,0 +1,12 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "AzureWebJobsDashboard": "UseDevelopmentStorage=true",
+    "AzureSignalRConnectionString": "Endpoint=https://eonicshacknight.service.signalr.net;AccessKey=NdXLbdvwwKs4v2V0zc+Soy6djkcBmrIUEfui0RuBfh0=;Version=1.0;"
+  },
+  "Host": {
+    "CORS": "http://localhost:4200",
+    "CORSCredentials": true
+  }
+}
